@@ -26,7 +26,7 @@ add_model_fits <-
 
     dsfworld_model_names <- c("model_1", "model_2", "model_3", "model_4", "model_5", "model_6")
 
-    if( which_models == "all") { which_models <- dsfworld_model_names }
+    if(identical(which_models, "all")) { which_models <- dsfworld_model_names }
     # model names are unique
     if(! length(which_models) == length(unique(which_models))) {
       warning("model names supplied to `which_models` are not all unique. \n Fitting each model name only once.")
